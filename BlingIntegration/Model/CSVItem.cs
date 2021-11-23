@@ -24,8 +24,8 @@ namespace BlingIntegration.Model
             this.identifier = item.identifier;
             this.unit = item.unit;
             this.price = DefaultFormat.Number(item.price);
-            this.created_at = DefaultFormat.Date(item.created_at);
-            this.updated_at = DefaultFormat.Date(item.updated_at);
+            this.created_at = DefaultFormat.Date(item.created_at.Value);
+            this.updated_at = DefaultFormat.Date(item.updated_at.Value);
         }
 
         public string sku { get; set; }

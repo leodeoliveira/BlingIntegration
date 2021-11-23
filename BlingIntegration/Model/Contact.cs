@@ -61,7 +61,7 @@ namespace BlingIntegration
         public int is_active => 1;
 
         [JsonProperty("dataInclusao")]
-        public DateTime registered_at { get; set; }
+        public DateTime? registered_at { get; set; }
 
         [JsonProperty("id")]
         public string original_id { get; set; }

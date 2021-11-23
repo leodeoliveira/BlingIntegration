@@ -31,7 +31,7 @@ namespace BlingIntegration.Model
             this.zipcode = string.IsNullOrEmpty(customer.zipcode) ? string.Empty : Regex.Replace(customer.zipcode, @"(\s+|-|\.)", "");
             this.employee_id = customer.employee_id;
             this.store_id = ConfigurationManager.AppSettings["CNPJ"];
-            this.registered_at = DefaultFormat.Date(customer.registered_at);
+            this.registered_at = DefaultFormat.Date(customer.registered_at != null ? customer.registered_at.Value : new DateTime());
             this.original_id = customer.original_id;
             this.identifier = DefaultFormat.CPF(customer.cpf);
         }

@@ -18,6 +18,8 @@ namespace BlingIntegration
 
         public static string Date(DateTime date)
         {
+            if (date == new DateTime())
+                return string.Empty;
             return date.ToString("yyyy-MM-dd");
         }
 

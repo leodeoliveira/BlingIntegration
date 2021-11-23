@@ -23,10 +23,9 @@ namespace BlingIntegration
 
         public string category1 => Category?.Name;
 
-        [JsonProperty("grupoProduto")]
         public string category2 { get; set; }
 
-        [JsonProperty("eighty_min_score")]
+        [JsonProperty("grupoProduto")]
         public string category3 { get; set; }
 
         public string size { get; set; }
@@ -42,10 +41,10 @@ namespace BlingIntegration
         public decimal price { get; set; }
 
         [JsonProperty("dataInclusao")]
-        public DateTime created_at { get; set; }
+        public DateTime? created_at { get; set; }
 
         [JsonProperty("dataAlteracao")]
-        public DateTime updated_at { get; set; }
+        public DateTime? updated_at { get; set; }
 
         [JsonProperty("categoria")]
         public Category Category { get; set; }
